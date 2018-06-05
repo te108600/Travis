@@ -6,7 +6,7 @@ def wirte_freq(hz=0):
 	bfile = "/dev/rtbuzzer0"
 	try:
 		with open(bfile,"w") as f:
-			f.write(str(hz) + "n")
+			f.write(str(hz) + "\n")
 	except IOError:
 		rospy.logerr("can't write to " + bfile)
 
